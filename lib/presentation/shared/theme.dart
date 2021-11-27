@@ -5,9 +5,10 @@ const Color whiteColor = Color(0xffFFFFFF);
 const Color blackColor = Color(0xff0C1027);
 
 TextStyle whiteSemiFont =
-    TextStyle(color: whiteColor, fontWeight: FontWeight.w600);
+    const TextStyle(color: whiteColor, fontWeight: FontWeight.w600);
 TextStyle whiteMediumFont =
-    TextStyle(color: whiteColor, fontWeight: FontWeight.w500);
-TextStyle semiFont = TextStyle(color: blackColor, fontWeight: FontWeight.w600);
+    const TextStyle(color: whiteColor, fontWeight: FontWeight.w500);
+TextStyle semiFont =
+    const TextStyle(color: blackColor, fontWeight: FontWeight.w600);
 TextStyle mediumFont =
-    TextStyle(color: blackColor, fontWeight: FontWeight.w500);
+    const TextStyle(color: blackColor, fontWeight: FontWeight.w500);

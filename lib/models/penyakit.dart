@@ -22,7 +22,7 @@ class Penyakit {
   Penyakit copyWith({
     String? id,
     String? name,
-    String? descrition,
+    String? description,
     String? gejala,
     List<Penanganan>? penanganan,
   }) =>

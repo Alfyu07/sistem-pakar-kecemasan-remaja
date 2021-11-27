@@ -13,9 +13,9 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 40),
               height: 255,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: mainColor,
-                borderRadius: const BorderRadius.only(
+                borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  PilihPakarPage(),
+                                  const PilihPakarPage(),
                             ),
                           );
                         },

@@ -91,7 +91,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      HasilPage()));
+                                      const HasilPage()));
                         }
                       },
                       width: 118,
@@ -129,8 +129,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
 
   int getNumberofPages() {
     int sisa = gejalaDummy.length % 5;
-    int tmp = (gejalaDummy.length / 5).toInt();
-    print(tmp);
+    int tmp = (gejalaDummy.length ~/ 5).toInt();
     return sisa > 0 ? tmp + 1 : tmp;
   }
 }
