@@ -9,15 +9,15 @@ class PertanyaanPage extends StatefulWidget {
 }
 
 class _PertanyaanPageState extends State<PertanyaanPage> {
-  int numberOfPages = 1;
+  late int numberOfPages;
   int page = 1;
-  late int show;
+  int perPage = 5;
 
+  int start = 0;
   @override
   void initState() {
     super.initState();
     numberOfPages = getNumberofPages();
-    show = page * 5;
   }
 
   @override
@@ -39,7 +39,14 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(children: [
-                for (int i = page; i < show; i++)
+                for (int i = (page * 5) - 5;
+                    i <
+                        (page == numberOfPages
+                            ? gejalaDummy.length
+                            : page > 1
+                                ? page * perPage
+                                : 5);
+                    i++)
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -142,8 +149,8 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
   }
 
   int getNumberofPages() {
-    int sisa = gejalaDummy.length % 5;
-    int tmp = (gejalaDummy.length ~/ 5).toInt();
+    int sisa = widget.gejala.length % 5;
+    int tmp = (widget.gejala.length ~/ 5).toInt();
     return sisa > 0 ? tmp + 1 : tmp;
   }
 }

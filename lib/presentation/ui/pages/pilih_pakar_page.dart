@@ -211,6 +211,7 @@ class PilihPakarPage extends StatelessWidget {
 
   goToPageDetail(BuildContext context) {
     if (gejalaController.pakarList != null) {
+      print(gejalaController.pakarList);
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) =>
               PertanyaanPage(gejala: gejalaController.pakarList)));

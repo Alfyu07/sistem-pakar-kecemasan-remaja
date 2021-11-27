@@ -3,7 +3,7 @@ part of 'services.dart';
 class GejalaServices {
   static var client = http.Client();
   static Future<List<Gejala>?> fetchCategory(int id) async {
-    var response = await client.post(Uri.parse(baseURL + '/api/gejala'),
+    var response = await client.post(Uri.parse(baseURL + 'gejala'),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(<String, String>{
           'pakar_id': id.toString(),
