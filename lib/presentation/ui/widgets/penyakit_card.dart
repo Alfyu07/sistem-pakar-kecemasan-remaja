@@ -25,6 +25,7 @@ class PenyakitCard extends StatelessWidget {
           ]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.only(
@@ -32,15 +33,23 @@ class PenyakitCard extends StatelessWidget {
             child: CachedNetworkImage(
               imageUrl:
                   "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/anxiety-main-1576255998.jpg",
-              width: 150,
-              height: 120,
+              width: double.infinity,
+              height: 115,
               fit: BoxFit.fill,
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            penyakit.name ?? " ",
-            style: mediumFont.copyWith(fontSize: 12),
+          Center(
+            child: SizedBox(
+              width: 150,
+              child: Text(
+                penyakit.name ?? " ",
+                style: mediumFont.copyWith(fontSize: 12),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
           )
         ],
       ),

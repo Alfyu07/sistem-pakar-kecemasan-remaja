@@ -14,7 +14,7 @@ class DetailsPenyakit extends StatelessWidget {
           children: [
             Image.network(
               "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/anxiety-main-1576255998.jpg",
-              width: MediaQuery.of(context).size.width,
+              width: double.infinity,
               height: 350,
               fit: BoxFit.cover,
             ),

@@ -8,12 +8,13 @@ class InfoPenyakitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: ghostWhiteColor,
-        body: Obx(() {
-          if (penyakitController.isLoading.value)
+      backgroundColor: ghostWhiteColor,
+      body: Obx(
+        () {
+          if (penyakitController.isLoading.value) {
             return Center(child: CircularProgressIndicator());
-          // ignore: curly_braces_in_flow_control_structures
-          else
+            // ignore: curly_braces_in_flow_control_structures
+          } else {
             return CustomScrollView(
               slivers: [
                 SliverToBoxAdapter(
@@ -92,10 +93,11 @@ class InfoPenyakitPage extends StatelessWidget {
                   ),
                 ),
                 SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 11),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   sliver: SliverGrid.count(
                       crossAxisCount: 2,
                       crossAxisSpacing: 10,
+                      childAspectRatio: 1,
                       mainAxisSpacing: 20,
                       children: penyakitController.penyakitList
                           .map((e) => InkWell(
@@ -115,6 +117,9 @@ class InfoPenyakitPage extends StatelessWidget {
                 ),
               ],
             );
-        }));
+          }
+        },
+      ),
+    );
   }
 }
