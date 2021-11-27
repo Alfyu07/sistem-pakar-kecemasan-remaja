@@ -65,6 +65,25 @@ class DetailsPenyakit extends StatelessWidget {
                       ]),
                 ),
               ],
+            ),
+            SafeArea(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24),
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: whiteColor),
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(Icons.arrow_back)),
+                  ),
+                ),
+              ),
             )
           ],
         ),
