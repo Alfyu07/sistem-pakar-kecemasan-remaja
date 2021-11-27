@@ -45,7 +45,9 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                             ? widget.gejala.length
                             : page > 1
                                 ? page * perPage
-                                : 5);
+                                : numberOfPages == 0
+                                    ? 0
+                                    : 5);
                     i++)
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

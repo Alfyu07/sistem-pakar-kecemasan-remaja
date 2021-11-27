@@ -86,7 +86,16 @@ class InfoPenyakitPage extends StatelessWidget {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                 children: dummyPenyakit
-                    .map((e) => PenyakitCard(penyakit: e))
+                    .map((e) => InkWell(
+                        onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DetailsPenyakit(
+                                  penyakit: e,
+                                ),
+                              ),
+                            ),
+                        child: PenyakitCard(penyakit: e)))
                     .toList()),
           )
         ],
