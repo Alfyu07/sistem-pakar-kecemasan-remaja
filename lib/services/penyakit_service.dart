@@ -4,7 +4,6 @@ class PenyakitServices {
   static var client = http.Client();
   static Future<List<Penyakit>?> fetchCategory() async {
     var response = await client.get(Uri.parse(baseURL + 'penyakit'));
-    print(response.body);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       List<Penyakit> categoryProduct =

@@ -4,7 +4,6 @@ class PakarServices {
   static var client = http.Client();
   static Future<List<Pakar>?> fetchCategory() async {
     var response = await client.get(Uri.parse(baseURL + 'pakar'));
-    print(response.body);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       List<Pakar> categoryProduct =
