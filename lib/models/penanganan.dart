@@ -13,3 +13,11 @@ class Penanganan {
       _$PenangananFromJson(json);
   Map<String, dynamic> toJson() => _$PenangananToJson(this);
 }
+
+List<Penanganan> dummyPenanganan = [
+  Penanganan(
+      id: "1",
+      idPenyakit: "2",
+      name:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur tempus, mattis odio purus convallis")
+];
