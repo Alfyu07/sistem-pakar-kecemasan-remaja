@@ -85,10 +85,16 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   Row(
-                    children: const [
-                      MenuItem(
-                        imgUrl: 'assets/video-tutorial 1.png',
-                        title: 'Tutorial',
+                    children: [
+                      InkWell(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TutorialPage())),
+                        child: MenuItem(
+                          imgUrl: 'assets/video-tutorial 1.png',
+                          title: 'Tutorial',
+                        ),
                       ),
                       SizedBox(width: 20),
                       MenuItem(

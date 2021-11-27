@@ -8,9 +8,12 @@ import 'package:sistem_pakar/models/results.dart';
 import 'package:sistem_pakar/models/penyakit.dart';
 import 'package:sistem_pakar/presentation/shared/theme.dart';
 import 'package:sistem_pakar/presentation/ui/widgets/widgets.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
 part 'home_page.dart';
 part 'pilih_pakar_page.dart';
 part 'pertanyaan_page.dart';
 part 'hasil_page.dart';
 part 'info_penyakit_page.dart';
 part 'detail_penyakit_page.dart';
+part 'tutorial_page.dart';
