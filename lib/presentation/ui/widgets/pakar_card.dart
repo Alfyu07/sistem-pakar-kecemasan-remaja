@@ -29,7 +29,8 @@ class PakarCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: CachedNetworkImage(
-                imageUrl: pakar.imgUrl ?? "",
+                imageUrl:
+                    "https://image.shutterstock.com/image-photo/cheerful-mature-doctor-posing-smiling-260nw-1384243295.jpg",
                 width: 64,
                 height: 64,
                 placeholder: (context, url) => Container(
@@ -45,14 +46,17 @@ class PakarCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    pakar.name ?? "",
-                    style: mediumFont,
+                  Container(
+                    width: 150,
+                    child: Text(
+                      pakar.name ?? "",
+                      style: mediumFont,
+                    ),
                   ),
                   SizedBox(
                     width: 230,
                     child: Text(
-                      "${pakar.pekerjaan} - ${pakar.tempatKerja}",
+                      "Universitas Mataram",
                       maxLines: 2,
                       style: lightFont.copyWith(
                           fontSize: 12, color: blueGreyColor, height: 1.5),
