@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_pakar/controllers/controller.dart';
 import 'package:sistem_pakar/models/gejala.dart';
 import 'package:sistem_pakar/models/pakar.dart';
 import 'package:sistem_pakar/models/diagnosis.dart';

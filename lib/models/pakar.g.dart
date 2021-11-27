@@ -8,7 +8,7 @@ part of 'pakar.dart';
 
 Pakar _$PakarFromJson(Map<String, dynamic> json) => Pakar(
       id: json['id'] as int?,
-      name: json['name'] as String?,
+      name: json['name'],
       bobotPakar: (json['bobot_pakar'] as num?)?.toDouble(),
     );
 
