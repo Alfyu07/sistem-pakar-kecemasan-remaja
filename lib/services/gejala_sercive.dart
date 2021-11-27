@@ -8,7 +8,6 @@ class GejalaServices {
         body: jsonEncode(<String, String>{
           'pakar_id': id.toString(),
         }));
-    print(response.body);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       List<Gejala> categoryProduct =

@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
 class TutorialPage extends StatefulWidget {
-  TutorialPage() : super();
+  const TutorialPage({Key? key}) : super(key: key);
 
   final String title = "Carousel Demo";
 

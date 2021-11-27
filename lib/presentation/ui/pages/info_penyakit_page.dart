@@ -12,7 +12,7 @@ class InfoPenyakitPage extends StatelessWidget {
       body: Obx(
         () {
           if (penyakitController.isLoading.value) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
             // ignore: curly_braces_in_flow_control_structures
           } else {
             return CustomScrollView(
@@ -112,7 +112,7 @@ class InfoPenyakitPage extends StatelessWidget {
                               child: PenyakitCard(penyakit: e)))
                           .toList()),
                 ),
-                SliverToBoxAdapter(
+                const SliverToBoxAdapter(
                   child: SizedBox(height: 40),
                 ),
               ],

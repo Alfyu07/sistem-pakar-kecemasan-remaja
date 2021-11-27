@@ -90,19 +90,19 @@ class HomePage extends StatelessWidget {
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TutorialPage())),
-                        child: MenuItem(
+                                builder: (context) => const TutorialPage())),
+                        child: const MenuItem(
                           imgUrl: 'assets/video-tutorial 1.png',
                           title: 'Tutorial',
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       InkWell(
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TentangPage())),
-                        child: MenuItem(
+                                builder: (context) => const TentangPage())),
+                        child: const MenuItem(
                           imgUrl: 'assets/info-aplikasi.png',
                           title: 'Info Aplikasi',
                         ),

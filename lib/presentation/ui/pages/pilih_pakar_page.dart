@@ -8,20 +8,22 @@ class PilihPakarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final PakarController pakarController = Get.put(PakarController());
     return Scaffold(
-        backgroundColor: whiteColor,
-        appBar: AppBar(
-          title: Text(
-            'Pilih Pakar',
-            style: whiteSemiFont.copyWith(fontSize: 16),
-          ),
-          toolbarHeight: 80,
-          backgroundColor: mainColor,
+      backgroundColor: whiteColor,
+      appBar: AppBar(
+        title: Text(
+          'Pilih Pakar',
+          style: whiteSemiFont.copyWith(fontSize: 16),
         ),
-        body: Obx(() {
-          if (pakarController.isLoading.value)
-            return Center(child: CircularProgressIndicator());
+        toolbarHeight: 80,
+        backgroundColor: mainColor,
+      ),
+      body: Obx(
+        () {
+          if (pakarController.isLoading.value) {
+            return const Center(child: CircularProgressIndicator());
+          }
           // ignore: curly_braces_in_flow_control_structures
-          else
+          else {
             // ignore: curly_braces_in_flow_control_structures
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 32),
@@ -45,18 +47,19 @@ class PilihPakarPage extends StatelessWidget {
                     .toList(),
               ),
             );
-        }));
+          }
+        },
+      ),
+    );
   }
 
   goToPageDetail(BuildContext context) {
-    if (gejalaController.pakarList.length > 0) {
-      print(gejalaController.pakarList.length);
-
+    if (gejalaController.pakarList.isNotEmpty) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) =>
               PertanyaanPage(gejala: gejalaController.pakarList)));
     } else {
-      Future.delayed(Duration(milliseconds: 200), () {
+      Future.delayed(const Duration(milliseconds: 200), () {
         goToPageDetail(context);
       });
     }

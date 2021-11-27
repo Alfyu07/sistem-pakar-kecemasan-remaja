@@ -99,9 +99,6 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                             page = page + 1;
                           });
                         } else {
-                          print(widget.gejala[0].checked);
-                          print(widget.gejala[0].bobotUser);
-
                           prosesController.fetchSilders(widget.gejala
                               .where((i) => i.checked == true)
                               .toList());
@@ -136,7 +133,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
               builder: (BuildContext context) =>
                   HasilPage(results: prosesController.results)));
     } else {
-      Future.delayed(Duration(milliseconds: 100), () {
+      Future.delayed(const Duration(milliseconds: 100), () {
         goToPageDetail(context);
       });
     }
@@ -156,8 +153,6 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                   () {
                     e.bobotUser = value;
                     e.checked = false;
-                    print(e.checked);
-                    print(e.bobotUser);
                   },
                 );
               } else {
