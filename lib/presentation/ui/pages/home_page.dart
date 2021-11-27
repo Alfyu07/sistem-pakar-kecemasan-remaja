@@ -75,8 +75,7 @@ class HomePage extends StatelessWidget {
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    const InfoPenyakitPage())),
+                                builder: (context) => InfoPenyakitPage())),
                         child: const MenuItem(
                           imgUrl: 'assets/fever 1.png',
                           title: 'Info Penyakit',

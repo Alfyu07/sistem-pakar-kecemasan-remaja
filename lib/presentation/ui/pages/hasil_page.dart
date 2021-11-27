@@ -38,7 +38,7 @@ class HasilPage extends StatelessWidget {
               const SizedBox(height: 40),
               Text('Solusi', style: mediumFont.copyWith(fontSize: 18)),
               const SizedBox(height: 16),
-              for (int i = 0; i < dummyDiagnosis.saranPenanganan!.length; i++)
+              for (int i = 0; i < results!.penyakit.penanganan!.length; i++)
                 Container(
                   margin: const EdgeInsets.only(bottom: 16),
                   width: double.infinity,
@@ -56,7 +56,7 @@ class HasilPage extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      dummyDiagnosis.saranPenanganan![i] ?? "",
+                      results!.penyakit.penanganan![i].name ?? "",
                       style: mediumFont.copyWith(fontSize: 18),
                     ),
                   ),

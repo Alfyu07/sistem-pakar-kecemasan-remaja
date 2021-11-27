@@ -7,7 +7,7 @@ part of 'penanganan.dart';
 // **************************************************************************
 
 Penanganan _$PenangananFromJson(Map<String, dynamic> json) => Penanganan(
-      id: json['id'] as String?,
+      id: json['id'] as int?,
       idPenyakit: json['idPenyakit'] as String?,
       name: json['name'] as String?,
     );
