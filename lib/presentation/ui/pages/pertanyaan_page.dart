@@ -1,8 +1,8 @@
 part of 'pages.dart';
 
 class PertanyaanPage extends StatefulWidget {
-  final Pakar pakar;
-  const PertanyaanPage({Key? key, required this.pakar}) : super(key: key);
+  final List<Gejala> gejala;
+  const PertanyaanPage({Key? key, required this.gejala}) : super(key: key);
 
   @override
   State<PertanyaanPage> createState() => _PertanyaanPageState();
@@ -42,7 +42,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                 for (int i = (page * 5) - 5;
                     i <
                         (page == numberOfPages
-                            ? gejalaDummy.length
+                            ? widget.gejala.length
                             : page > 1
                                 ? page * perPage
                                 : 5);
@@ -51,19 +51,19 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        gejalaDummy[i].name ?? "",
+                        widget.gejala[i].name ?? "",
                         style: mediumFont.copyWith(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          buildRadio(gejalaDummy[i], "None", 0.0),
-                          buildRadio(gejalaDummy[i], "STS", 0.2),
-                          buildRadio(gejalaDummy[i], "TS", 0.4),
-                          buildRadio(gejalaDummy[i], "RG", 0.6),
-                          buildRadio(gejalaDummy[i], "S", 0.8),
-                          buildRadio(gejalaDummy[i], "SS", 1.0),
+                          buildRadio(widget.gejala[i], "None", 0.0),
+                          buildRadio(widget.gejala[i], "STS", 0.2),
+                          buildRadio(widget.gejala[i], "TS", 0.4),
+                          buildRadio(widget.gejala[i], "RG", 0.6),
+                          buildRadio(widget.gejala[i], "S", 0.8),
+                          buildRadio(widget.gejala[i], "SS", 1.0),
                         ],
                       ),
                       const SizedBox(height: 16)
@@ -149,8 +149,8 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
   }
 
   int getNumberofPages() {
-    int sisa = gejalaDummy.length % 5;
-    int tmp = (gejalaDummy.length ~/ 5).toInt();
+    int sisa = widget.gejala.length % 5;
+    int tmp = (widget.gejala.length ~/ 5).toInt();
     return sisa > 0 ? tmp + 1 : tmp;
   }
 }
