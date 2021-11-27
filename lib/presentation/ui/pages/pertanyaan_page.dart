@@ -12,6 +12,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
   late int numberOfPages;
   int page = 1;
   int perPage = 5;
+  ProsesController prosesController = Get.put(ProsesController());
 
   int start = 0;
   @override
@@ -95,12 +96,16 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                             page = page + 1;
                           });
                         } else {
+                          widget.gejala
+                              .where((i) => i.checked == true)
+                              .toList();
+
                           //!Proses diagnosis
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      const HasilPage()));
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (BuildContext context) =>
+                          //             const HasilPage()));
                         }
                       },
                       width: 118,
@@ -113,6 +118,20 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
         ),
       ),
     );
+  }
+
+  goToPageDetail(BuildContext context) {
+    if (prosesController.results != null) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) =>
+                  HasilPage(results: prosesController.results)));
+    } else {
+      Future.delayed(Duration(milliseconds: 100), () {
+        goToPageDetail(context);
+      });
+    }
   }
 
   Column buildRadio(Gejala e, String title, double value) {

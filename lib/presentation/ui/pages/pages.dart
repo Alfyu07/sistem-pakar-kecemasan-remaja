@@ -4,6 +4,7 @@ import 'package:sistem_pakar/controllers/controller.dart';
 import 'package:sistem_pakar/models/gejala.dart';
 import 'package:sistem_pakar/models/pakar.dart';
 import 'package:sistem_pakar/models/diagnosis.dart';
+import 'package:sistem_pakar/models/results.dart';
 
 import 'package:sistem_pakar/presentation/shared/theme.dart';
 import 'package:sistem_pakar/presentation/ui/widgets/widgets.dart';

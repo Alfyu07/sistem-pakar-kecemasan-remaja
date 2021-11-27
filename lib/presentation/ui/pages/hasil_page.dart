@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
 class HasilPage extends StatelessWidget {
-  const HasilPage({Key? key}) : super(key: key);
+  const HasilPage({Key? key, Results? results}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
