@@ -49,12 +49,14 @@ class PilihPakarPage extends StatelessWidget {
   }
 
   goToPageDetail(BuildContext context) {
-    if (gejalaController.pakarList != null) {
+    if (gejalaController.pakarList.length > 0) {
+      print(gejalaController.pakarList.length);
+
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) =>
               PertanyaanPage(gejala: gejalaController.pakarList)));
     } else {
-      Future.delayed(Duration(milliseconds: 100), () {
+      Future.delayed(Duration(milliseconds: 200), () {
         goToPageDetail(context);
       });
     }

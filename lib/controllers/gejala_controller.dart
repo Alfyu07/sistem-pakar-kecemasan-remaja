@@ -12,6 +12,7 @@ class GejalaController extends GetxController {
   void fetchSilders(int? id) async {
     try {
       isLoading(true);
+      pakarList.clear();
       var category = await GejalaServices.fetchCategory(id!);
       // ignore: unnecessary_null_comparison
       if (category != null) {

@@ -8,10 +8,12 @@ part 'results.g.dart';
 @JsonSerializable()
 class Results {
   Penyakit penyakit;
+  double bobot;
   List<ResultsDetail>? resultDetail;
 
   Results({
     required this.penyakit,
+    required this.bobot,
     this.resultDetail,
   });
 
@@ -21,6 +23,7 @@ class Results {
   }) =>
       Results(
         penyakit: penyakit,
+        bobot: bobot,
         resultDetail: resultDetail ?? this.resultDetail,
       );
 

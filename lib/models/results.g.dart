@@ -7,7 +7,8 @@ part of 'results.dart';
 // **************************************************************************
 
 Results _$ResultsFromJson(Map<String, dynamic> json) => Results(
-      penyakit: json['hasil_pakar'] as Penyakit,
+      penyakit: Penyakit.fromJson(json['hasil_pakar']),
+      bobot: json['bobot'] as double,
       resultDetail: (json['list_case'] as List<dynamic>?)
           ?.map((e) => ResultsDetail.fromJson(e as Map<String, dynamic>))
           .toList(),

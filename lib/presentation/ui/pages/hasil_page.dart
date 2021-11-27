@@ -1,7 +1,8 @@
 part of 'pages.dart';
 
 class HasilPage extends StatelessWidget {
-  const HasilPage({Key? key, Results? results}) : super(key: key);
+  final Results? results;
+  const HasilPage({Key? key, required this.results}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +22,16 @@ class HasilPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 40),
-              dummyDiagnosis.bobot != null
+              results!.bobot != null
                   ? Center(
-                      child: Text('${dummyDiagnosis.bobot! * 100}%',
+                      child: Text('${results!.bobot * 100}%',
                           style: semiFont.copyWith(fontSize: 36)),
                     )
                   : Center(
                       child: Text('-', style: semiFont.copyWith(fontSize: 36))),
               Center(
                 child: Text(
-                  '${dummyDiagnosis.namaPenyakit![0]}',
+                  '${results!.penyakit.name}',
                   style: semiFont.copyWith(fontSize: 20),
                 ),
               ),

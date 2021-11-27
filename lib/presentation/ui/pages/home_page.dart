@@ -71,9 +71,16 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      const MenuItem(
-                        imgUrl: 'assets/fever 1.png',
-                        title: 'Info Penyakit',
+                      InkWell(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const InfoPenyakitPage())),
+                        child: const MenuItem(
+                          imgUrl: 'assets/fever 1.png',
+                          title: 'Info Penyakit',
+                        ),
                       ),
                     ],
                   ),

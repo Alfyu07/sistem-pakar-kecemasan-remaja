@@ -9,10 +9,11 @@ class ProsesController extends GetxController {
     super.onInit();
   }
 
-  void fetchSilders(int? id) async {
+  void fetchSilders(List<Gejala>? gejala) async {
     try {
       isLoading(true);
-      var category = await GejalaServices.fetchCategory(id!);
+      results = null;
+      var category = await ProsesServices.fetchCategory(gejala!);
       // ignore: unnecessary_null_comparison
       if (category != null) {
         // ignore: unnecessary_cast

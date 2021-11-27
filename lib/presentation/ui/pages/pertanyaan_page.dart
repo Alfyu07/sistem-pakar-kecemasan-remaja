@@ -10,6 +10,7 @@ class PertanyaanPage extends StatefulWidget {
 
 class _PertanyaanPageState extends State<PertanyaanPage> {
   late int numberOfPages;
+
   int page = 1;
   int perPage = 5;
   ProsesController prosesController = Get.put(ProsesController());
@@ -96,9 +97,14 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                             page = page + 1;
                           });
                         } else {
-                          widget.gejala
+                          print(widget.gejala[0].checked);
+                          print(widget.gejala[0].bobotUser);
+
+                          prosesController.fetchSilders(widget.gejala
                               .where((i) => i.checked == true)
-                              .toList();
+                              .toList());
+
+                          goToPageDetail(context);
 
                           //!Proses diagnosis
                           // Navigator.push(
@@ -143,11 +149,13 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
             value: value,
             groupValue: e.bobotUser ?? 0.0,
             onChanged: (value) {
-              if (e.bobotUser == null || e.bobotUser == 0.0) {
+              if (value == 0.0) {
                 setState(
                   () {
                     e.bobotUser = value;
                     e.checked = false;
+                    print(e.checked);
+                    print(e.bobotUser);
                   },
                 );
               } else {
