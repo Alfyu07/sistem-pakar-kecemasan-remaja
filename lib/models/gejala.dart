@@ -43,20 +43,18 @@ List<Gejala> gejalaDummy = [
       name: "Merasa selalu sendirian",
       bobotPakar: 0.2),
   Gejala(
-      id: 8,
-      idPenyakit: [1, 2],
-      name: "Merasa semua tidak baik baik saja",
-      bobotPakar: 0.3),
+    id: 8,
+    idPenyakit: [1, 2],
+    name: "Merasa semua tidak baik baik saja",
+    bobotPakar: 0.3,
+  ),
   Gejala(id: 9, idPenyakit: [1, 2], name: "Merasa tertinggal", bobotPakar: 0.2),
   Gejala(
-      id: 10,
-      idPenyakit: [1, 2],
-      name: "Merasa selalu sendirian",
-      bobotPakar: 0.2),
+      id: 10, idPenyakit: [1, 2], name: "Merasa kurang dana", bobotPakar: 0.2),
   Gejala(
       id: 11,
       idPenyakit: [1, 2],
-      name: "Merasa semua tidak baik baik saja",
+      name: "Merasa tidak dihiraukan",
       bobotPakar: 0.3),
   Gejala(
       id: 12, idPenyakit: [1, 2], name: "Merasa tertinggal", bobotPakar: 0.2),
