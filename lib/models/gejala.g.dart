@@ -7,9 +7,9 @@ part of 'gejala.dart';
 // **************************************************************************
 
 Gejala _$GejalaFromJson(Map<String, dynamic> json) => Gejala(
-      id: json['id'] as int?,
+      id: json['id'] as int,
       idPenyakit:
-          (json['idPenyakit'] as List<dynamic>?)?.map((e) => e as int).toList(),
+          (json['penyakit'] as List<dynamic>?)?.map((e) => e as int).toList(),
       name: json['name'] as String?,
       bobotPakar: (json['bobotPakar'] as num?)?.toDouble(),
       bobotUser: (json['bobotUser'] as num?)?.toDouble(),

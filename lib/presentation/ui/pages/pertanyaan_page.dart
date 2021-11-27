@@ -34,7 +34,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -58,6 +58,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          buildRadio(gejalaDummy[i], "None", 0.0),
                           buildRadio(gejalaDummy[i], "STS", 0.2),
                           buildRadio(gejalaDummy[i], "TS", 0.4),
                           buildRadio(gejalaDummy[i], "RG", 0.6),
@@ -121,11 +122,23 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
           scale: 1.5,
           child: Radio<double>(
             value: value,
-            groupValue: e.bobotUser,
+            groupValue: e.bobotUser ?? 0.0,
             onChanged: (value) {
-              setState(
-                () => e.bobotUser = value,
-              );
+              if (e.bobotUser == null || e.bobotUser == 0.0) {
+                setState(
+                  () {
+                    e.bobotUser = value;
+                    e.checked = false;
+                  },
+                );
+              } else {
+                setState(
+                  () {
+                    e.bobotUser = value;
+                    e.checked = true;
+                  },
+                );
+              }
             },
           ),
         ),

@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const PilihPakarPage(),
+                                  PilihPakarPage(),
                             ),
                           );
                         },
