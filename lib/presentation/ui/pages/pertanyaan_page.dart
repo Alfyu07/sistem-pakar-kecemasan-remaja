@@ -14,13 +14,10 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
   int perPage = 5;
 
   int start = 0;
-  late List<Gejala> tempGejala;
   @override
   void initState() {
     super.initState();
     numberOfPages = getNumberofPages();
-    tempGejala = gejalaDummy;
-    print(tempGejala.length);
   }
 
   @override
@@ -45,7 +42,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                 for (int i = (page * 5) - 5;
                     i <
                         (page == numberOfPages
-                            ? tempGejala.length
+                            ? gejalaDummy.length
                             : page > 1
                                 ? page * perPage
                                 : 5);
@@ -54,18 +51,18 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        tempGejala[i].name ?? "",
+                        gejalaDummy[i].name ?? "",
                         style: mediumFont.copyWith(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          buildRadio(tempGejala[i], "STS", 0.2),
-                          buildRadio(tempGejala[i], "TS", 0.4),
-                          buildRadio(tempGejala[i], "RG", 0.6),
-                          buildRadio(tempGejala[i], "S", 0.8),
-                          buildRadio(tempGejala[i], "SS", 1.0),
+                          buildRadio(gejalaDummy[i], "STS", 0.2),
+                          buildRadio(gejalaDummy[i], "TS", 0.4),
+                          buildRadio(gejalaDummy[i], "RG", 0.6),
+                          buildRadio(gejalaDummy[i], "S", 0.8),
+                          buildRadio(gejalaDummy[i], "SS", 1.0),
                         ],
                       ),
                       const SizedBox(height: 16)
