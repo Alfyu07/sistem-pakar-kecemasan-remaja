@@ -8,18 +8,18 @@ part of 'diagnosis.dart';
 
 Diagnosis _$DiagnosisFromJson(Map<String, dynamic> json) => Diagnosis(
       id: json['id'] as String?,
-      namaPenyakit: (json['namaPenyakit'] as List<dynamic>?)
+      namaPenyakit: (json['nama_penyakit'] as List<dynamic>?)
           ?.map((e) => e as String?)
           .toList(),
       bobot: (json['bobot'] as num?)?.toDouble(),
-      saranPenanganan: (json['saranPenanganan'] as List<dynamic>?)
+      saranPenanganan: (json['saran_penanganan'] as List<dynamic>?)
           ?.map((e) => e as String?)
           .toList(),
     );
 
 Map<String, dynamic> _$DiagnosisToJson(Diagnosis instance) => <String, dynamic>{
       'id': instance.id,
-      'namaPenyakit': instance.namaPenyakit,
+      'nama_penyakit': instance.namaPenyakit,
       'bobot': instance.bobot,
-      'saranPenanganan': instance.saranPenanganan,
+      'saran_penanganan': instance.saranPenanganan,
     };

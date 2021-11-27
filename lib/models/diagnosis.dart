@@ -15,3 +15,10 @@ class Diagnosis {
       _$DiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$DiagnosisToJson(this);
 }
+
+Diagnosis dummyDiagnosis = Diagnosis(
+  id: "1",
+  namaPenyakit: ["Cemas disorder"],
+  bobot: 0.99,
+  saranPenanganan: ["Makan yang teratur", "Kuatkan iman", "Cari pacar"],
+);

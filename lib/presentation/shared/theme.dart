@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Color mainColor = const Color(0xff141B41);
-Color whiteColor = const Color(0xffFFFFFF);
-Color blackColor = const Color(0xff0C1027);
+const Color mainColor = Color(0xff141B41);
+const Color whiteColor = Color(0xffFFFFFF);
+const Color blackColor = Color(0xff0C1027);
 
 TextStyle whiteSemiFont =
     TextStyle(color: whiteColor, fontWeight: FontWeight.w600);

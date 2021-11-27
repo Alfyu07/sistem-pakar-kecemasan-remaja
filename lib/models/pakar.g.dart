@@ -1,20 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'penanganan.dart';
+part of 'pakar.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Penanganan _$PenangananFromJson(Map<String, dynamic> json) => Penanganan(
-      id: json['id'] as String?,
-      idPenyakit: json['id_penyakit'] as String?,
+Pakar _$PakarFromJson(Map<String, dynamic> json) => Pakar(
+      id: json['id'] as int?,
       name: json['name'] as String?,
+      bobotPakar: (json['bobot_pakar'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$PenangananToJson(Penanganan instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$PakarToJson(Pakar instance) => <String, dynamic>{
       'id': instance.id,
-      'id_penyakit': instance.idPenyakit,
       'name': instance.name,
+      'bobotPakar': instance.bobotPakar,
     };
