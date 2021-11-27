@@ -4,7 +4,7 @@ part 'gejala.g.dart';
 
 @JsonSerializable()
 class Gejala {
-  int? id;
+  int id;
   List<int>? idPenyakit;
   String? name;
   double? bobotPakar;
@@ -12,7 +12,7 @@ class Gejala {
   bool? checked = false;
 
   Gejala(
-      {this.id,
+      {required this.id,
       this.idPenyakit,
       this.name,
       this.bobotPakar,

@@ -1,8 +1,8 @@
 part of 'pages.dart';
 
 class PertanyaanPage extends StatefulWidget {
-  final Pakar pakar;
-  const PertanyaanPage({Key? key, required this.pakar}) : super(key: key);
+  final List<Gejala> gejala;
+  const PertanyaanPage({Key? key, required this.gejala}) : super(key: key);
 
   @override
   State<PertanyaanPage> createState() => _PertanyaanPageState();
@@ -12,6 +12,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
   int numberOfPages = 1;
   int page = 1;
   late int show;
+
   @override
   void initState() {
     super.initState();
@@ -33,7 +34,7 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -43,18 +44,19 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        gejalaDummy[i].name ?? "",
+                        widget.gejala[i].name ?? "",
                         style: mediumFont.copyWith(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          buildRadio(gejalaDummy[i], "STS", 0.2),
-                          buildRadio(gejalaDummy[i], "TS", 0.4),
-                          buildRadio(gejalaDummy[i], "RG", 0.6),
-                          buildRadio(gejalaDummy[i], "S", 0.8),
-                          buildRadio(gejalaDummy[i], "SS", 1.0),
+                          buildRadio(widget.gejala[i], "None", 0.0),
+                          buildRadio(widget.gejala[i], "STS", 0.2),
+                          buildRadio(widget.gejala[i], "TS", 0.4),
+                          buildRadio(widget.gejala[i], "RG", 0.6),
+                          buildRadio(widget.gejala[i], "S", 0.8),
+                          buildRadio(widget.gejala[i], "SS", 1.0),
                         ],
                       ),
                       const SizedBox(height: 16)
@@ -113,11 +115,23 @@ class _PertanyaanPageState extends State<PertanyaanPage> {
           scale: 1.5,
           child: Radio<double>(
             value: value,
-            groupValue: e.bobotUser,
+            groupValue: e.bobotUser ?? 0.0,
             onChanged: (value) {
-              setState(
-                () => e.bobotUser = value,
-              );
+              if (e.bobotUser == null || e.bobotUser == 0.0) {
+                setState(
+                  () {
+                    e.bobotUser = value;
+                    e.checked = false;
+                  },
+                );
+              } else {
+                setState(
+                  () {
+                    e.bobotUser = value;
+                    e.checked = true;
+                  },
+                );
+              }
             },
           ),
         ),

@@ -1,7 +1,8 @@
 part of 'pages.dart';
 
 class PilihPakarPage extends StatelessWidget {
-  const PilihPakarPage({Key? key}) : super(key: key);
+  PilihPakarPage({Key? key}) : super(key: key);
+  final GejalaController gejalaController = Get.put(GejalaController());
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +100,12 @@ class PilihPakarPage extends StatelessWidget {
                         "assets/penyakit.jpg",
                         0xFFEF9A9A,
                         0xFFE57373),
-                    onTap: () {
+                    onTap: () async {
+                      gejalaController
+                          .fetchSilders(pakarController.pakarList[index].id);
+
+                      await goToPageDetail(context);
+
                       //navigator 1
                       // Navigator.of(context)
                       //     .push(MaterialPageRoute(builder: (context) => ListJus()));
@@ -201,6 +207,18 @@ class PilihPakarPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  goToPageDetail(BuildContext context) {
+    if (gejalaController.pakarList != null) {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) =>
+              PertanyaanPage(gejala: gejalaController.pakarList)));
+    } else {
+      Future.delayed(Duration(milliseconds: 100), () {
+        goToPageDetail(context);
+      });
+    }
   }
 }
 

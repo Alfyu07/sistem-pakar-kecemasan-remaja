@@ -9,5 +9,6 @@ import 'package:sistem_pakar/models/penyakit.dart';
 
 part 'pakar_service.dart';
 part 'penyakit_service.dart';
+part 'gejala_sercive.dart';
 
 String baseURL = 'http://pakar.hmbpayment.com/api/';
