@@ -17,3 +17,4 @@ part 'hasil_page.dart';
 part 'info_penyakit_page.dart';
 part 'detail_penyakit_page.dart';
 part 'tutorial_page.dart';
+part 'tentang_page.dart';

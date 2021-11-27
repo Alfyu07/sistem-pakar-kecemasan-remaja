@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   Row(
@@ -97,10 +97,16 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 20),
-                      MenuItem(
-                        imgUrl: 'assets/info-aplikasi.png',
-                        title: 'Info Aplikasi',
-                      ),
+                      InkWell(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TentangPage())),
+                        child: MenuItem(
+                          imgUrl: 'assets/info-aplikasi.png',
+                          title: 'Info Aplikasi',
+                        ),
+                      )
                     ],
                   ),
                 ],
