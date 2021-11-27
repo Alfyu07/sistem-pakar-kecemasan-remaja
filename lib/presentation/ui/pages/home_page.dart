@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(width: 22),
                       Image.asset('assets/illustration.png',
-                          height: 140, width: 130),
+                          height: 140, width: 95),
                     ],
                   ),
                 ],
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   Row(

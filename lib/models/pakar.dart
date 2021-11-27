@@ -4,10 +4,10 @@ part 'pakar.g.dart';
 @JsonSerializable()
 class Pakar {
   int? id;
-  String? name;
+  String name;
   double? bobotPakar;
 
-  Pakar({this.id, this.name, this.bobotPakar});
+  Pakar({this.id, required this.name, this.bobotPakar});
   factory Pakar.fromJson(Map<String, dynamic> json) => _$PakarFromJson(json);
   Map<String, dynamic> toJson() => _$PakarToJson(this);
 }
