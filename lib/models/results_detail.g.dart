@@ -9,7 +9,7 @@ part of 'results_detail.dart';
 ResultsDetail _$ResultsDetailFromJson(Map<String, dynamic> json) =>
     ResultsDetail(
       kode: json['kode_case'] as String?,
-      name: json['name'] as String?,
+      name: json['nama_case'] as String?,
       hasil: json['hasil_perhitungan'] as double?,
     );
 

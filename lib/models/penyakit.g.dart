@@ -9,7 +9,7 @@ part of 'penyakit.dart';
 Penyakit _$PenyakitFromJson(Map<String, dynamic> json) => Penyakit(
       id: json['id'] as int?,
       name: json['name'] as String?,
-      description: json['description'] as String?,
+      description: json['deskripsi'] as String?,
       gejala: json['gejala'] as String?,
       penanganan: (json['penanganan'] as List<dynamic>?)
           ?.map((e) => Penanganan.fromJson(e as Map<String, dynamic>))

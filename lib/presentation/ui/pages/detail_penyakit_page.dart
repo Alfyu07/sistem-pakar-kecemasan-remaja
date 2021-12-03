@@ -44,23 +44,6 @@ class DetailsPenyakit extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
 
-                        // *Penanganan
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 40),
-                          child: Text(
-                            'Penanganan',
-                            style: mediumFont.copyWith(fontSize: 18),
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-                        for (int i = 0; i < penyakit.penanganan!.length; i++)
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 40),
-                            child: Text(
-                              penyakit.penanganan![i].name ?? " ",
-                              style: lightFont,
-                            ),
-                          ),
                         const SizedBox(height: 64),
                       ]),
                 ),

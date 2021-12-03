@@ -8,23 +8,23 @@ part 'results.g.dart';
 @JsonSerializable()
 class Results {
   Penyakit penyakit;
-  double bobot;
-  List<ResultsDetail>? resultDetail;
+  String bobot;
+  // List<ResultsDetail>? resultDetail;
 
   Results({
     required this.penyakit,
     required this.bobot,
-    this.resultDetail,
+    // this.resultDetail,
   });
 
   Results copyWith({
     required Penyakit penyakit,
-    List<ResultsDetail>? resultDetail,
+    // List<ResultsDetail>? resultDetail,
   }) =>
       Results(
         penyakit: penyakit,
         bobot: bobot,
-        resultDetail: resultDetail ?? this.resultDetail,
+        // resultDetail: resultDetail ?? this.resultDetail,
       );
 
   factory Results.fromJson(Map<String, dynamic> json) =>

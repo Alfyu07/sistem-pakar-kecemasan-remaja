@@ -93,7 +93,7 @@ class InfoPenyakitPage extends StatelessWidget {
                   ),
                 ),
                 SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   sliver: SliverGrid.count(
                       crossAxisCount: 2,
                       crossAxisSpacing: 10,
