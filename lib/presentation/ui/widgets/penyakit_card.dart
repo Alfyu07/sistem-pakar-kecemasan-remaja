@@ -31,7 +31,7 @@ class PenyakitCard extends StatelessWidget {
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(12), topRight: Radius.circular(12)),
             child: CachedNetworkImage(
-              imageUrl:
+              imageUrl: penyakit.imgUrl ??
                   "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/anxiety-main-1576255998.jpg",
               width: double.infinity,
               height: 115,

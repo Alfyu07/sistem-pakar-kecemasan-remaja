@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sistem_pakar/controllers/controller.dart';
 import 'package:sistem_pakar/models/gejala.dart';
-import 'package:sistem_pakar/models/diagnosis.dart';
 import 'package:sistem_pakar/models/results.dart';
 import 'package:sistem_pakar/models/penyakit.dart';
 import 'package:sistem_pakar/presentation/shared/theme.dart';

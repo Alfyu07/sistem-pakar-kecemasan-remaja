@@ -46,7 +46,7 @@ class PakarCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 150,
                     child: Text(
                       pakar.name ?? "",

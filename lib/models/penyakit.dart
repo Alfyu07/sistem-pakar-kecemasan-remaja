@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:sistem_pakar/models/gejala.dart';
 import 'package:sistem_pakar/models/penanganan.dart';
 
 part 'penyakit.g.dart';
